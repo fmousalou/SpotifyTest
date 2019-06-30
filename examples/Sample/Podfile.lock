@@ -1,0 +1,16 @@
+PODS:
+  - SpotifyLogin (0.1.6)
+
+DEPENDENCIES:
+  - SpotifyLogin (from `../..`)
+
+EXTERNAL SOURCES:
+  SpotifyLogin:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  SpotifyLogin: 7ac1f609a908b7e7bfad215204b967248c9b69ef
+
+PODFILE CHECKSUM: b01f6b8da130f48606b35fe2c87407d98d669942
+
+COCOAPODS: 1.7.2

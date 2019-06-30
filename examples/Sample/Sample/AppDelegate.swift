@@ -20,18 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let redirectURL: URL = URL(string: "loginsample://")!
-        SpotifyLogin.shared.configure(clientID: "YOUR CLIENT ID",
-                                      clientSecret: "YOUR CLIENT SECRET",
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        let redirectURL: URL = URL(string: "dpg://mydigipay/")!
+        SpotifyLogin.shared.configure(clientID: "ba05b9cd59634cefa8493ac961d76ed6",
+                                      clientSecret: "80b7235a88264654a105a989f6775a59",
                                       redirectURL: redirectURL)
         return true
     }
-
+    
     func application(_ app: UIApplication,
                      open url: URL,
-                     options: [UIApplicationOpenURLOptionsKey: Any] = [:]) -> Bool {
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
         let handled = SpotifyLogin.shared.applicationOpenURL(url) { _ in }
         return handled
     }
